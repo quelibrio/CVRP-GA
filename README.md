@@ -79,3 +79,24 @@ double getFitness(Population population, int index) {
 }
 ```
 To magnify the difference between probabilities so that parents with higher fitness are more likely to be selected, I squared the fitness when in use.
+
+####Routes
+```
+cost 833.8658275459998
+1->69->74->63->2->65->43->42->44->23->3->34->7->1
+1->76->75->29->70->62->22->37->61->72->48->6->49->31->1
+1->30->16->14->55->71->21->38->58->46->28->53->35->5->1
+1->68->8->36->54->15->60->20->9->47->1
+1->27->73->32->66->67->12->39->11->59->13->1
+1->33->4->45->19->51->56->26->10->40->41->18->1
+1->52->17->50->25->57->24->64->1
+```
+##Complication and Running
+To compile:
+```
+javac *.java
+```
+To run:
+```
+java CVRP
+```
