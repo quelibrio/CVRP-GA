@@ -1,0 +1,2 @@
+javac *.java
+java CVRP 40 20000 95 1
