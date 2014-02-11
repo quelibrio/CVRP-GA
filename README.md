@@ -62,3 +62,20 @@ Void allocation(Customers customers) {
 }
 ```
 After allocation, each truck was responsible for a set of customers who were in a fan- shape area, so that the trucks could really work “locally”. The best solution with this allocation algorithm was 833 with graph shown:
+
+![solution](http://www.mftp.info/20140202/1392082942x1927178161.png)
+
+####Fitness Function
+When doing crossover, parents were selected depending on their fitness. As the shorter the route is, the better the solution, the fitness function needs to be slightly changed from the one in the slide:
+```Java
+double getFitness(Population population, int index) {
+      double fitness = 0;
+      double totalLength = 0;
+      for (int i = 0; i < pop.size(); i++) {
+            totalLength += calcRoute(population.get(i));
+      }
+      fitness = totalLength / calcRoute(population.get(index));
+      return fitness;
+}
+```
+To magnify the difference between probabilities so that parents with higher fitness are more likely to be selected, I squared the fitness when in use.
